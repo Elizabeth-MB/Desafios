@@ -3,8 +3,8 @@ const Contenedor = require('./Class/Contenedor.js')
 const contenedor = new Contenedor()
 
 let product = {
-    title: 'Calculadora',
-    price: 320,
+    title: 'Mapa',
+    price: 110,
     thumbnail: 'https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png'
 }
 
