@@ -1,9 +1,8 @@
 const express = require('express')
 const Contenedor = require('./Contenedor.js')
-
 const app = express();
 
-const cont = new Contenedor('./products.json')
+const cont = new Contenedor('products.json')
 
 const server = app.listen(8080, () => {
     console.log('Server Up!');
@@ -12,7 +11,7 @@ const server = app.listen(8080, () => {
 server.on('error', error => console.log(`Error en servidor ${error}`))
 
 app.get('/', (request, response) => {
-    response.send('<h1 style= "text-align: center">Desafío 2</h1>')
+    response.send('<h1 style= "text-align: center">Desafío 3</h1><ol><h2>Parte 1</h2><li>/productos</li><li>/productoRandom</li><h2>Parte 2 - Usando clase Contenedor</h2><li>/productos2</li><li>/productoRandom2</li></ol>')
 })
 
 // Productos
@@ -56,30 +55,23 @@ const products = [
  ]  
 
 // PRIMERA PARTE
-/* Ruta get '/productos' que devuelva un array con todos los productos disponibles en el servidor */
+// Ruta get '/productos' que devuelva un array con todos los productos disponibles en el servidor
 app.get('/productos', (request, response) => {
-  /* let productos = products.map((prod) => prod.title);
-       response.send(productos) */
        response.send(products)
 })
 
-/* Ruta get '/productoRandom' que devuelva un producto elegido al azar entre todos los productos disponibles */
-
+// Ruta get '/productoRandom' que devuelva un producto elegido al azar entre todos los productos disponibles
 app.get('/productoRandom', (request, response) => {
     response.send(products[Math.floor(Math.random() * products.length)]);
 }) 
 
 // SEGUNDA PARTE - USANDO LA CLASE CONTENEDOR
-/* Ruta get '/productos' que devuelva un array con todos los productos disponibles en el servidor */
+/* Productos obtenidos del json */
 app.get('/productos2', (request, response) => {
-  cont.getAll().then(result=>response.send(result))
+  cont.getAll().then(result=>response.send(result.message))
 })
 
-/* Ruta get '/productoRandom' que devuelva un producto elegido al azar entre todos los productos disponibles */
-
+/* Producto random obtenido del json */
 app.get('/productoRandom2', (request, response) => {
-
-  cont.getAll().then(result => response.send(result[Math.floor(Math.random() * (result.length))]))
-
-    // response.send(cont[Math.floor(Math.random() * cont.length)]);
+  cont.getAll().then(result=>response.send(result.message[Math.floor(Math.random() * products.length)]))
 }) 
