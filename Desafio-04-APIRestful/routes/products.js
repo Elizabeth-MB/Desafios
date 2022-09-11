@@ -30,7 +30,7 @@ router.put('/:id', (req, res) => {
 })
 
 router.delete('/:id', (req, res) => {
-    let result =contenedor.delete(req.params.id)
+    let result = contenedor.delete(req.params.id)
     res.send(result)
 })
 

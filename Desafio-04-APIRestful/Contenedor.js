@@ -22,8 +22,8 @@ class Contenedor {
         return products
     }
 
-    deleteById = (id) => {
-        id = parseInt
+    delete = (id) => {
+        id = parseInt(id)
         let newProducts = products.filter(item => item.id !== id)
         products = newProducts
         return products
