@@ -1,0 +1,13 @@
+<%- include('./partials/head.ejs') %> 
+
+<% if(products.length>0) { %> 
+    <% products.forEach(item => { %>
+        <div><%= item.title %></div>
+        <div><%= item.price %></div>
+        <img src="<%= item.thumbnail %>" width="50">
+    <% }) %>
+<% } else { %>
+    <p>No hay datos</p>
+<% } %>  
+
+<%- include('./partials/foot.ejs') %> 

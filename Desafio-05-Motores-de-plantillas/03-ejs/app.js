@@ -7,5 +7,13 @@ const server = app.listen(8080,() => {
 })
 
 app.use(express.json())
-app.use('/', express.static('public'))
-app.use('/api/products', productsRouter)
+app.use(express.urlencoded({extended: true}))
+
+// seteamos el motor de plantillas
+app.set('views', './views')
+app.set('view engine', 'ejs')
+
+app.get('/', (req, res) => {
+    res.render('create-product')
+})
+app.use('/products', productsRouter)

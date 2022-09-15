@@ -1,0 +1,25 @@
+<%- include('./partials/head.ejs') %> 
+<h1>Desafio 05 - Motores de plantillas</h1>
+<form action="/products" method="post">
+    <div class="form-group">
+        <label for="title">Nombre</label>
+        <input type="text" class="form-control" name="title">
+    </div>
+
+    <div class="form-group">
+        <label for="price">Precio</label>
+        <input type="text" class="form-control" name="price">
+    </div>
+
+    <div class="form-group">
+        <label for="thumbnail">Thumbnail</label>
+        <input type="text" class="form-control" name="thumbnail">
+    </div>
+
+    <div class="form-group">
+        <input type="submit">
+    </div>
+
+</form>
+
+<%- include('./partials/foot.ejs') %> 
