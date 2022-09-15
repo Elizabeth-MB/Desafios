@@ -1,25 +1,36 @@
-<%- include('./partials/head.ejs') %> 
-<h1>Desafio 05 - Motores de plantillas</h1>
-<form action="/products" method="post">
-    <div class="form-group">
-        <label for="title">Nombre</label>
-        <input type="text" class="form-control" name="title">
+<%- include('./partials/head.ejs') %>
+
+    <h3 class="text-center m-2 text-white">Create product</h3>
+
+    <div class="container d-grid gap-2 d-md-flex justify-content-md-end">
+
+        <a href="/products" class="btn btn-success stretched-link">View Products</a>
     </div>
 
-    <div class="form-group">
-        <label for="price">Precio</label>
-        <input type="text" class="form-control" name="price">
+    <div class="container form-control mt-5 p-5">
+        <form action="/products" method="post">
+            <div class="form-group mb-3">
+                <label for="title" class="mb-2">Nombre del Producto:</label>
+                <input type="text" class="form-control" name="title">
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="price" class="mb-2">Precio:</label>
+                <input type="number" class="form-control" name="price">
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="thumbnail" class="mb-2">Thumbnail:</label>
+                <input type="text" class="form-control" name="thumbnail">
+            </div>
+
+            <div class="form-group">
+                <input class="btn btn-success" type="submit">
+            </div>
+
+        </form>
+
     </div>
 
-    <div class="form-group">
-        <label for="thumbnail">Thumbnail</label>
-        <input type="text" class="form-control" name="thumbnail">
-    </div>
 
-    <div class="form-group">
-        <input type="submit">
-    </div>
-
-</form>
-
-<%- include('./partials/foot.ejs') %> 
+    <%- include('./partials/foot.ejs') %>
