@@ -1,0 +1,3 @@
+De los tres motores de plantillas visto, yo prefiero el motor de plantillas handlebars, ya que considero que su sintaxis es un poco más sencilla, a diferencia del motor de plantillas PUG.
+Además, investigando un poco, encontré que handlebars tiene una mayor adopción y aprobación que EJS, lo que considero hará que sea más fácil encontrar la solución a algún problema.
+Y por último, tengo más conocimientos en html que en js, por lo que también es algo que consideré al elegir handlebars.
