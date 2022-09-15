@@ -1,11 +1,23 @@
-const express = require('express')
-const productsRouter = require('./routes/products')
-const app = express()
+const express = require("express");
+const handlebars = require("express-handlebars");
 
-const server = app.listen(8080,() => {
-    console.log('Server Up')
-})
+const productsRouter = require("./routes/products");
+const app = express();
 
-app.use(express.json())
-app.use('/', express.static('public'))
-app.use('/api/products', productsRouter)
+const server = app.listen(8080, () => {
+    console.log("Server Up")
+});
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+// seteamos el motor de plantillas
+app.engine("handlebars", handlebars.engine())
+app.set("views", "./views");
+app.set("view engine", "handlebars");
+
+app.get("/", (req, res) => {
+    res.render("create-product");
+});
+
+app.use('/products', productsRouter);
