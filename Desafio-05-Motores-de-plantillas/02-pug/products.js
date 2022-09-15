@@ -1,37 +1,22 @@
-const express = require('express')
+let products = [
+    /* {
+        id: 1,
+        title: 'Burger',
+        price: 20,
+        thumbnail: 'https://cdn3.iconfinder.com/data/icons/world-cuisine-astute-vol-1/512/Burger_Cheeseburger-256.png'
+    },
+    {
+        id: 2,
+        title: 'Orange',
+        price: 20,
+        thumbnail: 'https://cdn4.iconfinder.com/data/icons/fruits-79/48/08-orange-256.png'
+    },
+    {
+        id: 3,
+        title: 'Apple',
+        price: 20,
+        thumbnail: 'https://cdn4.iconfinder.com/data/icons/fruits-79/48/19-green_apple-256.png'
+    }, */
+]
 
-const router = express.Router()
-
-const Contenedor = require('../Contenedor')
-const contenedor = new Contenedor()
-
-router.get('/', (req, res) => {
-    let result = contenedor.getAll()
-    res.send(result)
-})
-
-router.get('/:id', (req, res) => {
-    let result = contenedor.getById(req.params.id)
-    if (!result) return res.send({error: 'Producto no encontrado'})
-    res.send(result)
-})
-
-router.post('/', (req, res) => {
-    if (!req.body.title || !req.body.price || !req.body.thumbnail) return res.send({error: 'Los datos son necesarios'})
-    let result = contenedor.create(req.body)
-    res.send(result)
-})
-
-router.put('/:id', (req, res) => {
-    if (!req.body.title || !req.body.price || !req.body.thumbnail) return res.send({error: 'Los datos son necesarios'})
-    let result = contenedor.update(req.params.id, req.body)
-    if (!result) return res.send({error: 'Producto no encontrado'})
-    res.send(result)
-})
-
-router.delete('/:id', (req, res) => {
-    let result = contenedor.delete(req.params.id)
-    res.send(result)
-})
-
-module.exports = router
+module.exports = products
