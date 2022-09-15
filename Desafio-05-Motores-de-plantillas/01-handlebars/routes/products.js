@@ -2,7 +2,7 @@ const express = require('express')
 
 const router = express.Router()
 
-const Contenedor = require('../Contenedor')
+const Contenedor = require('../Desafio-04-APIRestful/Contenedor')
 const contenedor = new Contenedor()
 
 router.get('/', (req, res) => {
