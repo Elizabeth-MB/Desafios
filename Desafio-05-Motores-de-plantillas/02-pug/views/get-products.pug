@@ -1,0 +1,37 @@
+html
+    head
+        include partials/head.pug
+
+    body.bg-dark
+
+        h1.text-center.m-3.text-white.p-3 Desafío 05 - PUG
+            
+        h3.text-center.m-2.text-white Products
+
+        .container.d-grid.gap-2.d-md-flex.justify-content-md-end
+            a.btn.btn-success(href='/') + Create a new Product
+        
+        .container.form-control.mt-5.p-5
+            if products.length
+                table.table.table-striped.table-hover.border
+                    thead
+                        tr.text-center
+                            th(scope='col') ID
+                            th(scope='col') Product
+                            th(scope='col') Price
+                            th(scope='col') Thumbnail
+                        
+                    tbody
+                        each item in products
+                            tr.text-center
+                                th(scope='row')=item.id
+                                td=item.title
+                                td=item.price
+                                td
+                                    img(src=item.thumbnail, width='50')
+                    
+            else
+                p.text-center
+                    strong No hay datos
+            
+        include partials/foot.pug 

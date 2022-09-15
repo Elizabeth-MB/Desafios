@@ -1,0 +1,25 @@
+html
+    include partials/head.pug
+
+    body.bg-dark
+
+        h1.text-center.m-3.text-white.p-3 Desafío 05 - PUG
+            
+        h3.text-center.m-2.text-white Create product
+        .container.d-grid.gap-2.d-md-flex.justify-content-md-end
+            a.btn.btn-success(href='/products') View Products
+        .container.form-control.mt-5.p-5
+            form(action='/products' method='post')
+                .form-group.mb-3
+                    label.mb-2(for='title') Nombre del Producto:
+                    input.form-control(type='text' name='title')
+                .form-group.mb-3
+                    label.mb-2(for='price') Precio:
+                    input.form-control(type='number' name='price')
+                .form-group.mb-3
+                    label.mb-2(for='thumbnail') Thumbnail:
+                    input.form-control(type='text' name='thumbnail')
+                .form-group
+                    input.btn.btn-success(type='submit')
+
+        include partials/foot.pug 

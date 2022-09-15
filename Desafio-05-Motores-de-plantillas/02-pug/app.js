@@ -11,7 +11,7 @@ app.use(express.urlencoded({extended: true}))
 
 // seteamos el motor de plantillas
 app.set('views', './views')
-app.set('view engine', 'ejs')
+app.set('view engine', 'pug')
 
 app.get('/', (req, res) => {
     res.render('create-product')
