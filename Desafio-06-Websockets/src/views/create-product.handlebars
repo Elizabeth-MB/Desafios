@@ -1,20 +1,55 @@
-<h2>Create a product</h2>
-<form id="productsForm">
-    <label>Title:</label>
-    <input name="title">
-    <label>Price:</label>
-    <input name="price">
-    <label>Thumbnail:</label>
-    <input name="thumbnail">
-    <input type="submit">
-</form>
-<hr />
-<div id="history">There is no data to show</div>
-<hr />
-<h2>Messages history</h2>
-<form id="chatForm">
-    <input name="email">
-    <div id="chatHistory">There is no message to show</div>
-    <input name="message">
-    <input type="submit">
-</form>
+<div class="container bg-white rounded mb-5 p-3">
+
+    <h2 class="p-3 text-center">Crear Producto</h2>
+
+    <div>
+
+        <form id="productsForm">
+
+            <div class="mb-3">
+                <label for="title" class="form-label">Nombre del producto:</label>
+                <input type="text" class="form-control" name="title">
+            </div>
+            <div class="mb-3">
+                <label for="price" class="form-label">Precio:</label>
+                <input type="number" class="form-control" name="price">
+            </div>
+            <div class="mb-3">
+                <label for="thumbnail" class="form-label">Thumbnail:</label>
+                <input type="text" class="form-control" name="thumbnail">
+            </div>
+
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center pb-5">
+                <input class="btn btn-success" type="submit">
+            </div>
+
+        </form>
+    </div>
+
+    <hr />
+
+    <div id="history" class="h4 pb-2 mb-4 text-danger border-bottom border-danger text-center">Aún no se ha agregado
+        ningún producto</div>
+
+    {{!--
+    <hr /> --}}
+    <h2 class="text-center">Historial de mensajes</h2>
+    <form id="chatForm">
+        <div id="chatHistory" class="">No hay mensajes para mostrar</div>
+
+        <div class="row">
+            <div class="col">
+                <input type="email" class="form-control" placeholder="Email" name="email">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Mensaje"  name="message">
+            </div>
+            <div class="col">
+                <input class="btn btn-primary" type="submit">
+            </div>
+        </div>
+        <input name="email">
+        <input name="message">
+        <input type="submit">
+    </form>
+</div>

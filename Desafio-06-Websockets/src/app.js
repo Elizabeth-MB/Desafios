@@ -1,16 +1,25 @@
 const express = require('express')
+
 const { Server } = require('socket.io')
+
 const handlebars = require('express-handlebars')
+
 const productRouter = require('./routes/product.router')
+
 const chatRouter = require('./routes/chat.router')
+
 let products = require('./models/product.model')
 
 const Manager = require('./controllers/chat.manager')
+
 const manager = new Manager()
 
 const app = express()
+
+/* Creamos el servidor express en el puerto 8080 para DEV y process.env.PORT para PROD */
 const PORT = process.env.PORT || 8080
 const server = app.listen(PORT, () => console.log(`Server up on port ${PORT}`))
+
 const io = new Server(server)
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
@@ -18,7 +27,10 @@ app.use(express.urlencoded({extended:true}))
 app.use('/content', express.static('./src/public'))
 
 app.engine('handlebars', handlebars.engine())
+
 app.set('views', __dirname+'/views')
+
+/* Definimos nuestro motor de plantillas */
 app.set('view engine', 'handlebars')
 
 app.get('/', (req, res) => {
