@@ -1,26 +1,20 @@
 [
   {
     "id": 1,
-    "email": "alexmarinmendez@gmail.com",
-    "timestamp": "19/9/2022 06:02:36",
-    "message": "Hola?"
+    "email": "eli@mail.com",
+    "timestamp": "9/22/2022, 10:02:30 PM",
+    "message": "Holaaa"
   },
   {
     "id": 2,
-    "email": "marinmendez@hotmail.com",
-    "timestamp": "19/9/2022 06:03:00",
-    "message": "Hola. Soy Alex"
+    "email": "eli@mail.com",
+    "timestamp": "9/22/2022, 10:04:07 PM",
+    "message": "Holaaa"
   },
   {
     "id": 3,
-    "email": "rominamarinmurillo@gmail.com",
-    "timestamp": "19/9/2022 06:03:26",
-    "message": "Hola?"
-  },
-  {
-    "id": 4,
-    "email": "eli",
-    "timestamp": "22/9/2022 16:22:34",
-    "message": "hola"
+    "email": "example@mail.com",
+    "timestamp": "9/22/2022, 10:04:39 PM",
+    "message": "Cómo estás?"
   }
 ]
