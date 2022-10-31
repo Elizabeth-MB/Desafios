@@ -3,7 +3,7 @@ const knex = require('knex')
 class Contenedor {
     constructor(options, table){
         this.db = knex(options)
-        // Recibe el nombre de la tabla con la cual se va trabajar
+        
         this.table = table
     }
 

@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "email": "eli@mail.com",
+    "timestamp": "9/22/2022, 10:02:30 PM",
+    "message": "Holaaa"
+  },
+  {
+    "id": 2,
+    "email": "eli@mail.com",
+    "timestamp": "9/22/2022, 10:04:07 PM",
+    "message": "Holaaa"
+  },
+  {
+    "id": 3,
+    "email": "example@mail.com",
+    "timestamp": "9/22/2022, 10:04:39 PM",
+    "message": "Cómo estás?"
+  }
+]
