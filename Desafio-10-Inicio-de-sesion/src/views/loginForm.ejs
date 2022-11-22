@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main class="container mt-3">
+        <div class="p-3 mt-4 bg-light bg-gradient">
+            <h2><%= title %></h2>
+            <form id="formLogin" action="<%= action %>" method="post">        
+                <div class="mb-2 w-50">
+                    <label for="username" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="username" placeholder="example@mail.com" name="username">
+                </div>
+                <div class="mb-2 w-50">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="*****" name="password">
+                </div>
+                <div class="py-2 w-50 d-flex justify-content-between align-items-center">
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                    <a href="<%= href %>"><%= linkMsg %> </a>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
