@@ -1,0 +1,11 @@
+{
+  "name": "desafio-14-desplegar-proyecto-en-la-nube",
+  "version": "1.0.0",
+  "description": "Desafio 14",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Elizabeth Martinez",
+  "license": "ISC"
+}
